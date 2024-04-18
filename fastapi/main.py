@@ -8,7 +8,7 @@ db = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="apiJordi"
+    database="rutes"
 )
 cursor = db.cursor()
 
@@ -23,7 +23,7 @@ class Ruta(BaseModel):
 app = FastAPI()
 
 # Ruta para crear una nueva ruta
-@app.post("/ruta/")
+@app.post("/rutes/saulcespedes/")
 async def create_ruta(ruta: Ruta):
     query = "INSERT INTO ruta (alumne, descripcio, latitud, longitud) VALUES (%s, %s, %s, %s)"
     values = (ruta.alumne, ruta.descripcio, ruta.latitud, ruta.longitud)
@@ -32,10 +32,11 @@ async def create_ruta(ruta: Ruta):
     return {"message": "Ruta creada exitosamente"}
 
 # Ruta para obtener todas las rutas
-@app.get("/ruta/", response_model=List[Ruta])
+@app.get("/rutes/saulcespedes/", response_model=List[Ruta])
 async def get_rutas():
     query = "SELECT * FROM ruta"
     cursor.execute(query)
     result = cursor.fetchall()
     rutas = [{"alumne": row[1], "descripcio": row[2], "latitud": row[3], "longitud": row[4]} for row in result]
     return rutas
+
