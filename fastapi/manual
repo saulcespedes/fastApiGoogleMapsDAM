@@ -1,10 +1,14 @@
-instalar la BD en el SQLWorkbench
+1.  instalar la BD en el SQLWorkbench
 
-ejecutar en la carpeta donde esta el main este comando para poder levantar la api
+
+2.  poner una contrasena de la BD en el archivo de main.py
+
+
+3.  ejecutar en la carpeta donde esta el main este comando para poder levantar la api
 ~/.local/bin/uvicorn main:app --reload
 
 
-este es el post 
+4.  este es el post 
 
 @POST("/ruta/")
 //@POST("/rutes/{nomcognom1}/")
@@ -16,7 +20,7 @@ este es el post
 
 
 
-direccion local para conectarse a la api
+5.   direccion local para conectarse a la api y su funcion
 
    private  val urlapi = "http://10.0.2.2:8000/" // Esta dirección se usa para acceder al localhost desde el emulador Android
 
