@@ -11,7 +11,7 @@ Utiliza SQL Workbench para instalar la base de datos proporcionada. Asegúrate d
 
 pip install fastapi uvicorn
 
-Una vez que estés en esa carpeta, simplemente ejecuta el siguiente comando:
+Una vez que estés en esa carpeta del main.py, simplemente ejecuta el siguiente comando:
 
 bash
 Copy code
