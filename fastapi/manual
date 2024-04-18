@@ -10,10 +10,10 @@
 
 4.  este es el post 
 
-@POST("/ruta/")
-//@POST("/rutes/{nomcognom1}/")
+
+@POST("/rutes/{nomcognom1}/")
     suspend fun addUbicacion(
-    //@Path("nomcognom1") nomcognom1: String,
+   @Path("nomcognom1") nomcognom1: String,
 
     @Body ubicacion: Ruta
     ): Response<Missatge>
