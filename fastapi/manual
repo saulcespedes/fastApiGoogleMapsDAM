@@ -20,3 +20,21 @@ direccion local para conectarse a la api
 
    private  val urlapi = "http://10.0.2.2:8000/" // Esta dirección se usa para acceder al localhost desde el emulador Android
 
+
+    fun addRuta2(ruta: Ruta): Boolean {
+        var resposta: Response<Missatge>? = null
+        runBlocking {
+            val corrutina = launch {
+                resposta = getRetrofit().create(ApiService::class.java)
+                    .addUbicacion( ruta)
+            }
+            corrutina.join()
+        }
+
+        if (resposta?.isSuccessful!!)
+            return true
+        else {
+            Log.d("addProducte", resposta?.code().toString())
+            return false
+        }
+    }
