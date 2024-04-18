@@ -7,6 +7,8 @@ FastAPI y sus dependencias instaladas en el backend.
 Retrofit configurado en el proyecto de Android para interactuar con la API.
 Pasos de Configuración
 1. Instalar la Base de Datos
+fastapi/DB.sql
+
 Utiliza SQL Workbench para instalar la base de datos proporcionada. Asegúrate de tener la base de datos en funcionamiento antes de continuar.
 
 pip install fastapi uvicorn
